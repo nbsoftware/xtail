@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 {
     int open_files_only, already_open, iteration, i;
     struct entry_descrip *entryp;
-    struct stat sbuf;
+    struct stat sbuf, path_sbuf;
 
     /* 
      * Initialize.
@@ -61,6 +61,8 @@ int main(int argc, char *argv[])
 	    move_entry(List_file, List_zap, last_entry(List_zap));
 	    entryp->size = sbuf.st_size;
 	    entryp->mtime = sbuf.st_mtime;
+	    entryp->dev = sbuf.st_dev;
+	    entryp->ino = sbuf.st_ino;
 	    break;
 
 	case ENTRY_DIR:			/* move entry to dir list	*/
@@ -195,6 +197,20 @@ int main(int argc, char *argv[])
 	    }
 
 	    /*
+	     * See if an open file has been renamed.  Occasionally do
+	     * an extra stat on the file's name, and compare that to the
+	     * info which fstat() returned.
+	     */
+	    if (already_open && !open_files_only
+    	    	    && (stat(entryp->name, &path_sbuf) != 0
+			|| path_sbuf.st_dev != entryp->dev
+			|| path_sbuf.st_ino != entryp->ino)) {
+		message(MSSG_RENAMED, entryp);
+		move_entry(List_zap, List_file, i--);
+		continue;
+	    }
+
+	    /*
 	     * If nothing has changed then continue on.
 	     */
 	    if (entryp->size==sbuf.st_size && entryp->mtime==sbuf.st_mtime)
@@ -247,9 +263,11 @@ int main(int argc, char *argv[])
 	    }
 
 	    /*
-	     * Update the modification time.
+	     * Update the other saved info about this entry.
 	     */
 	    entryp->mtime = sbuf.st_mtime;
+	    entryp->dev = sbuf.st_dev;
+	    entryp->ino = sbuf.st_ino;
 
 	    /*
 	     * Since we've changed the mtime, the list might no longer be

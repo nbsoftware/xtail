@@ -1,0 +1,13 @@
+xtail (2.1-2) unstable; urgency=low
+
+  * Handle files which are renamed properly.
+
+ -- Roderick Schertler <roderick@argon.org>  Fri,  7 Dec 2001 09:16:54 -0500
+
+xtail (2.1-1) unstable; urgency=low
+
+  * Initial version (closes: #111309).
+
+ -- Roderick Schertler <roderick@argon.org>  Thu, 13 Sep 2001 17:23:10 -0400
+
+$Id: changelog,v 1.2 2001/12/07 14:18:27 roderick Exp $

@@ -1,0 +1,61 @@
+$Id: copyright,v 1.2 2001/12/07 14:18:27 roderick Exp $
+
+This is a Debian prepackaged version of xtail.  It was put together by
+Roderick Schertler <roderick@argon.org> with sources obtained from
+<URL:http://www.unicom.com/sw/xtail/>.
+
+The source has been modified so that it handles files which are renamed
+properly.
+
+The code is available under the terms of the BSD license.  On Debian
+systems, this license can be found in `/usr/share/common-licenses/BSD'.
+
+The original source distribution doesn't contain copyright terms.  Here's
+the response Chip Rosenthal sent me when I contacted him about them:
+
+Return-Path: chip@chinacat.unicom.com
+Delivery-Date: Wed Sep  5 21:09:49 2001
+Received: from junior.ibcinc.com (junior.ibcinc.com [198.22.130.72])
+	by eeyore.ibcinc.com (8.8.5/8.8.5/1.9/ey-1.5) with ESMTP id VAA20093
+	for <roderick@eeyore.ibcinc.com>; Wed, 5 Sep 2001 21:09:48 -0400 (EDT)
+Received: from janus.ibcinc.com (janus.ibcinc.com [198.22.130.130])
+	by junior.ibcinc.com (8.8.5/8.8.5/1.9/jr-1.32) with SMTP id VAA01712
+	for <roderick@ibcinc.com>; Wed, 5 Sep 2001 21:09:45 -0400 (EDT)
+Received: (qmail 5716 invoked from network); 6 Sep 2001 01:09:44 -0000
+Received: from user5.net127.va.sprint-hsd.net (root@208.33.154.5)
+  by janus.ibcinc.com with SMTP; 6 Sep 2001 01:09:44 -0000
+Received: from coldsnap.unicom.com (coldsnap.unicom.com [192.108.105.33])
+        by user5.net127.va.sprint-hsd.net (8.12.0.Beta7/8.12.0.Beta7/Debian 8.12.0.Beta7-1) with ESMTP id f8619hHA006843
+        for <roderick@argon.org>; Wed, 5 Sep 2001 21:09:43 -0400
+Received: from chinacat.unicom.com (chinacat.unicom.com [192.108.105.34])
+	by coldsnap.unicom.com (8.11.0/8.11.0) with ESMTP id f8619e219673
+	for <roderick@argon.org>; Wed, 5 Sep 2001 20:09:40 -0500
+Received: (from chip@localhost)
+	by chinacat.unicom.com (8.11.0/8.10.1) id f8619bW05272
+	for roderick@argon.org; Wed, 5 Sep 2001 20:09:37 -0500
+Date: Wed, 5 Sep 2001 20:09:37 -0500
+From: Chip Rosenthal <chip@unicom.com>
+To: Roderick Schertler <roderick@argon.org>
+Subject: Re: xtail package for Debian
+Message-ID: <20010905200937.M1081@chinacat.unicom.com>
+References: <5020.999696331@eeyore.ibcinc.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+User-Agent: Mutt/1.2.5i
+In-Reply-To: <5020.999696331@eeyore.ibcinc.com>; from roderick@argon.org on Wed, Sep 05, 2001 at 09:25:31AM -0400
+
+On Wed, Sep 05, 2001 at 09:25:31AM -0400, Roderick Schertler wrote:
+> I've been using xtail since the comp.sources.misc release, I find it
+> invaluable.  I'd like to package it for Debian, but I don't see
+> copyright terms in the 2.1 release.  Would you mind specifying your
+> terms and making a new release (or just mailing them to me)?  Thanks
+> very much.
+
+You may use it under the terms of the BSD license.  Does that work
+for you?
+
+-- 
+Chip Rosenthal              Now we buy spam at the grocery store,
+http://www.unicom.com/      cause you can't eat the fish no more.
+<chip@unicom.com>             - Little Village

@@ -1,0 +1,87 @@
+#!/usr/bin/make -f
+
+# $Id: rules,v 1.2 2001/09/13 21:43:26 roderick Exp $
+
+dt		:= debian/xtail
+stamp_build	:= debian/stamp.build
+stamp_install	:= debian/stamp.install
+clean		:= $(stamp_build) $(stamp_install)
+
+export CFLAGS	:= -O2 -Wall
+ifneq "" "$(findstring debug,$(DEB_BUILD_OPTIONS))"
+    CFLAGS	+= -g
+endif
+
+export DH_COMPAT := 3
+export DH_OPTIONS
+
+build: DH_OPTIONS :=
+build: $(stamp_build)
+$(stamp_build):
+	dh_testdir
+	./configure --mandir='$${prefix}/share/man'
+	$(MAKE)
+	touch $@
+
+install: DH_OPTIONS :=
+install: $(stamp_install)
+$(stamp_install): $(stamp_build)
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+	dh_installdirs
+	$(MAKE) prefix=`pwd`/$(dt)/usr install
+#	dh_movefiles
+	touch $@
+
+clean: DH_OPTIONS :=
+clean:
+	dh_testdir
+	dh_testroot
+	[ ! -f Makefile ] || $(MAKE) distclean
+	dh_clean $(clean)
+
+binary-common:
+	dh_testdir
+	dh_testroot
+#	dh_installdebconf
+	dh_installdocs
+	dh_installexamples
+	dh_installmenu
+#	dh_installlogrotate
+#	dh_installemacsen
+#	dh_installpam
+#	dh_installmime
+#	dh_installinit
+#	dh_installman
+	dh_installcron
+	dh_installinfo
+#	dh_undocumented
+	dh_installchangelogs
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+#	dh_makeshlibs
+	dh_installdeb
+	dh_perl
+	dh_shlibdeps
+	dh_gencontrol -u -isp
+	dh_md5sums
+	dh_builddeb
+
+# Build architecture independant packages using the common target.
+# (Comment this out if you have none to build.)
+#binary-indep: DH_OPTIONS=-i
+#binary-indep: build install binary-common
+
+# Build architecture dependant packages using the common target.
+binary-arch: DH_OPTIONS=-a
+binary-arch: build install binary-common
+
+# Any other binary targets build just one binary package at a time.
+binary-%: build install
+	make -f debian/rules binary-common DH_OPTIONS=-p$*
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install

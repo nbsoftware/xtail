@@ -36,11 +36,6 @@
  */
 #define MAX_OPEN 8
 
-/*
- * MAX_ENTRIES - This is *BOGUS*  I should get rid of this.
- */
-#define MAX_ENTRIES 512
-
 
 
 /*****************************************************************************
@@ -75,12 +70,13 @@
 #define MSSG_CREATED	2	/* file has been created		*/
 #define MSSG_ZAPPED	3	/* file has been deleted		*/
 #define MSSG_TRUNC	4	/* file has been truncated		*/
-#define MSSG_NOTAFIL	5	/* error - not a regular file or dir	*/
-#define MSSG_STAT	6	/* error - stat() failed		*/
-#define MSSG_OPEN	7	/* error - open() failed		*/
-#define MSSG_SEEK	8	/* error - lseek() failed		*/
-#define MSSG_READ	9	/* error - read() failed		*/
-#define MSSG_UNKNOWN	10	/* unknown error - must be last in list */
+#define MSSG_RENAMED	5	/* file has been renamed		*/
+#define MSSG_NOTAFIL	6	/* error - not a regular file or dir	*/
+#define MSSG_STAT	7	/* error - stat() failed		*/
+#define MSSG_OPEN	8	/* error - open() failed		*/
+#define MSSG_SEEK	9	/* error - lseek() failed		*/
+#define MSSG_READ	10	/* error - read() failed		*/
+#define MSSG_UNKNOWN	11	/* unknown error - must be last in list */
 
 
 #ifdef INTERN
@@ -113,6 +109,8 @@ struct entry_descrip {
     int fd;		/* opened fd, or <= 0 if not opened		*/
     long size;		/* size of entry last time checked		*/
     long mtime;		/* modification time last time checked		*/
+    dev_t dev;		/* device number last time, if file is opened	*/
+    ino_t ino;		/* inode number last time, if file is opened	*/
 };
 
 struct entry_list {
@@ -171,6 +169,7 @@ EXTERN char *Progname;
 	"\n*** '%s' has been created ***\n",			/*MSSG_CREATED*/
 	"\n*** '%s' has been deleted ***\n",			/*MSSG_ZAPPED */
 	"\n*** '%s' has been truncated - rewinding ***\n",	/*MSSG_TRUNC  */
+	"\n*** '%s' has been renamed - closing ***\n",		/*MSSG_RENAMED */
 	"\n*** error - '%s' not a file or dir - removed ***\n",	/*MSSG_NOTAFIL*/
 	"\n*** error - couldn't stat '%s' (%s) - removed ***\n",/*MSSG_STAT   */
 	"\n*** error - couldn't open '%s' (%s) - removed ***\n",/*MSSG_OPEN   */
