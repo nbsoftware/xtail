@@ -1,0 +1,5 @@
+# $Id: watch,v 1.1 2006-04-06 14:28:26 roderick Exp $
+
+version=2
+
+http://www.unicom.com/sw/xtail/xtail-(\d.*)\.tar\.gz

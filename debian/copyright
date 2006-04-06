@@ -1,4 +1,4 @@
-$Id: copyright,v 1.2 2001/12/07 14:18:27 roderick Exp $
+$Id: copyright,v 1.3 2006-04-06 14:28:17 roderick Exp $
 
 This is a Debian prepackaged version of xtail.  It was put together by
 Roderick Schertler <roderick@argon.org> with sources obtained from
@@ -10,8 +10,9 @@ properly.
 The code is available under the terms of the BSD license.  On Debian
 systems, this license can be found in `/usr/share/common-licenses/BSD'.
 
-The original source distribution doesn't contain copyright terms.  Here's
-the response Chip Rosenthal sent me when I contacted him about them:
+The original source distribution doesn't contain copyright terms.  It
+was written by Chip Rosenthal.  Here's the response he sent me when I
+contacted him about them:
 
 Return-Path: chip@chinacat.unicom.com
 Delivery-Date: Wed Sep  5 21:09:49 2001
