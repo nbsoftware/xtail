@@ -107,6 +107,8 @@ int scan_directory(const char *dirname)
 	} else {
 	    entryp->mtime = sbuf.st_mtime;
 	    entryp->size = sbuf.st_size;
+	    entryp->dev = sbuf.st_dev;
+	    entryp->ino = sbuf.st_ino;
 	}
 
     }

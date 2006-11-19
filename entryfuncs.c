@@ -75,6 +75,8 @@ struct entry_descrip *new_entry(struct entry_list *listp, const char *name)
     entryp->fd = 0;
     entryp->size =  0;
     entryp->mtime = 0;
+    entryp->dev = 0;
+    entryp->ino = 0;
 
     return E_append(listp,entryp);
 }
@@ -118,6 +120,8 @@ void move_entry(struct entry_list *dst_listp, struct entry_list *src_listp,
     if (Reset_status) {
 	entryp->size = 0;
 	entryp->mtime = 0;
+	entryp->dev = 0;
+	entryp->ino = 0;
     }
 }
 
