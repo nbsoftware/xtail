@@ -13,5 +13,9 @@ Description: like "tail -f", but works on truncated files, directories, more
  a bunch of files at once.  It notices if a file is truncated and starts
  from the beginning.  You can specify both filenames and directories on
  the command line.  If you specify a directory, it watches all the files
- in that directory.  It will notice when new files are created (and start
- watching them) or when old files are deleted (and stop watching them).
+ in that directory.  It will notice when new files are created (and
+ start watching them) or when old files are deleted (and stop watching
+ them).
+ .
+ Note that xtail isn't a graphical (X11) program, it runs on a plain tty.
+ The name likely comes from "eXtended tail" or such.

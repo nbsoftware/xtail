@@ -1,0 +1,4 @@
+$Id: TODO,v 1.1 2008-06-24 15:26:26 roderick Exp $
+
+- when a file is renamed you should pick up where you left off instead
+  of treating it as a new file, when possible
