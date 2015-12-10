@@ -12,7 +12,7 @@ ifneq "" "$(findstring debug,$(DEB_BUILD_OPTIONS))"
     CFLAGS	+= -g
 endif
 
-export DH_COMPAT := 3
+#export DH_COMPAT := 3
 export DH_OPTIONS
 
 build: DH_OPTIONS :=

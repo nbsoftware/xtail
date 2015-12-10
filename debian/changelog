@@ -1,3 +1,17 @@
+xtail (2.1-5.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Update DH level to 9 to avoid a FTBFS. (Closes: #800269)
+  * debian/compat: created.
+  * debian/control:
+      - Added the ${misc:Depends} variable to provide the
+        right install dependencies.
+      - Bumped Standards-Version to 3.9.6.
+  * debian/rules: disabled the DH_COMPAT line.
+  * debian/watch: updated. (Closes: #551417)
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Thu, 10 Dec 2015 17:54:42 -0200
+
 xtail (2.1-5) unstable; urgency=low
 
   * Note in debian/control that this isn't an X11 program (closes:
