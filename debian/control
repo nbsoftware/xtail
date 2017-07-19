@@ -1,9 +1,10 @@
 Source: xtail
 Section: utils
 Priority: optional
-Maintainer: Roderick Schertler <roderick@argon.org>
-Standards-Version: 3.9.6
-Build-Depends: debhelper (>= 9)
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Standards-Version: 4.0.0
+Build-Depends: debhelper (>= 10)
+Homepage: https://www.unicom.com/sw/xtail
 
 Package: xtail
 Architecture: any

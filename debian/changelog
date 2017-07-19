@@ -1,3 +1,18 @@
+xtail (2.1-6) unstable; urgency=medium
+
+  * QA upload.
+  * Source format 3.0 (quilt)
+  * Bumped compat level to 10
+  * Converted d/rules to dh format
+  * Add ISO Date patch from Jari Aalto <jari.aalto@cante.net> (Closes: #562903)
+  * Set maintainer to QA Group
+  * Added homepage to d/control
+  * Converted d/copyright to machine-readable format
+  * Made URLs use HTTPS where possible
+  * Standards version 4.0.0
+
+ -- David William Richmond Davies-Jones <david@exultantmonkey.co.uk>  Wed, 19 Jul 2017 15:32:38 +0100
+
 xtail (2.1-5.1) unstable; urgency=medium
 
   * Non-maintainer upload.

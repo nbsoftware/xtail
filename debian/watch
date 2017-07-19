@@ -1,2 +1,2 @@
 version=3
-http://www.unicom.com/sw/xtail .*/files/xtail-(\d\S+)\.tar\.(?:bz2|gz|xz)
+https://www.unicom.com/sw/xtail .*/files/xtail-(\d\S+)\.tar\.(?:bz2|gz|xz)

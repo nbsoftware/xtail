@@ -1,5 +1,5 @@
 .\" $Id: xtail.1,v 2.2 1996/06/25 00:31:15 chip Exp $
-.TH XTAIL 1
+.TH XTAIL 1L
 .SH NAME
 xtail - Watch the growth of files.
 .SH SYNTAX
@@ -31,7 +31,9 @@ most recently modified files being watched.  Send a quit signal
 tail(1)
 .SH NOTES
 .I Xtail
-may be easily confused.  For example, if you ask it to monitor a file
+may be easily confused.  For example, if a file is renamed,
+.I xtail
+may or may not continue to monitor it.  If you ask it to monitor a file
 multiple times, it probably will.  If you misspell a filename,
 .I xtail
 will treat it as a nonexistent entry and happily wait for its creation.
