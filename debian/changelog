@@ -13,6 +13,7 @@ xtail (2.1-7) unstable; urgency=medium
   * debian/copyright:
       - Reverted packaging licensing to BSD-3-Clause. (Closes: #956140)
       - Updated packaging copyright years.
+  * debian/patches: added a numeric prefix for all patches.
 
  -- Joao Eriberto Mota Filho <eriberto@debian.org>  Tue, 07 Apr 2020 00:39:15 -0300
 
