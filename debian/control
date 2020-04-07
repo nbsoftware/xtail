@@ -3,7 +3,7 @@ Section: utils
 Priority: optional
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Standards-Version: 4.0.0
-Build-Depends: debhelper (>= 10)
+Build-Depends: debhelper-compat (= 12)
 Homepage: https://www.unicom.com/sw/xtail
 
 Package: xtail
