@@ -18,6 +18,7 @@ xtail (2.1-7) unstable; urgency=medium
       - Added DEB_BUILD_MAINT_OPTIONS to improve the GCC hardening.
       - Removed trash.
   * debian/salsa-ci.yml: added to provide CI tests for Salsa.
+  * debian/tests/control: created to perform a trivial CI test.
   * debian/watch: bumped version to 4.
   * debian/xtail.dirs: renamed to debian/dirs.
 

@@ -1,0 +1,3 @@
+Test-Command: xtail 2>&1 | grep xtail
+
+Test-Command: timeout 5 xtail debian/changelog || exit 0
