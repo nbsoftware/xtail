@@ -5,6 +5,8 @@ xtail (2.1-7) unstable; urgency=medium
       - debian/compat: removed.
       - debian/control: changed from 'debhelper' to 'debhelper-compat' in
         Build-Depends field and bumped level to 12.
+  * debian/control:
+      - Added 'Rules-Requires-Root: no' to source stanza.
 
  -- Joao Eriberto Mota Filho <eriberto@debian.org>  Tue, 07 Apr 2020 00:39:15 -0300
 
