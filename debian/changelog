@@ -15,6 +15,7 @@ xtail (2.1-7) unstable; urgency=medium
       - Updated packaging copyright years.
   * debian/patches: added a numeric prefix for all patches.
   * debian/rules: removed trash.
+  * debian/watch: bumped version to 4.
 
  -- Joao Eriberto Mota Filho <eriberto@debian.org>  Tue, 07 Apr 2020 00:39:15 -0300
 
