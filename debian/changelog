@@ -9,6 +9,7 @@ xtail (2.1-7) unstable; urgency=medium
       - Added 'Rules-Requires-Root: no' to source stanza.
       - Bumped Standards-Version to 4.5.0.
       - Created VCS fields.
+      - Reorganized the long description.
 
  -- Joao Eriberto Mota Filho <eriberto@debian.org>  Tue, 07 Apr 2020 00:39:15 -0300
 
