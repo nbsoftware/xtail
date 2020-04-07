@@ -10,6 +10,9 @@ xtail (2.1-7) unstable; urgency=medium
       - Bumped Standards-Version to 4.5.0.
       - Created VCS fields.
       - Reorganized the long description.
+  * debian/copyright:
+      - Reverted packaging licensing to BSD-3-Clause. (Closes: #956140)
+      - Updated packaging copyright years.
 
  -- Joao Eriberto Mota Filho <eriberto@debian.org>  Tue, 07 Apr 2020 00:39:15 -0300
 
