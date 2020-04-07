@@ -14,7 +14,9 @@ xtail (2.1-7) unstable; urgency=medium
       - Reverted packaging licensing to BSD-3-Clause. (Closes: #956140)
       - Updated packaging copyright years.
   * debian/patches: added a numeric prefix for all patches.
-  * debian/rules: removed trash.
+  * debian/rules:
+      - Added DEB_BUILD_MAINT_OPTIONS to improve the GCC hardening.
+      - Removed trash.
   * debian/salsa-ci.yml: added to provide CI tests for Salsa.
   * debian/watch: bumped version to 4.
   * debian/xtail.dirs: renamed to debian/dirs.
