@@ -6,6 +6,8 @@ Standards-Version: 4.5.0
 Build-Depends: debhelper-compat (= 12)
 Rules-Requires-Root: no
 Homepage: https://www.unicom.com/sw/xtail
+Vcs-Browser: https://salsa.debian.org/debian/xtail
+Vcs-Git: https://salsa.debian.org/debian/xtail.git
 
 Package: xtail
 Architecture: any
