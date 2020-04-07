@@ -1,0 +1,43 @@
+.\" $Id: xtail.1,v 2.2 1996/06/25 00:31:15 chip Exp $
+.TH XTAIL 1L
+.SH NAME
+xtail - Watch the growth of files.
+.SH SYNTAX
+.B xtail
+entry ...
+.SH DESCRIPTION
+.I Xtail
+monitors one or more files, and displays all data written to a file
+since command invocation.  It is very useful for monitoring multiple
+logfiles simultaneously.
+.P
+If an
+.I entry
+given on the command line is a directory, all files in that directory
+will be monitored, including those created after the
+.I xtail
+invocation.  If an
+.I entry
+given on the command line doesn't exist,
+.I xtail
+will watch for it and monitor it once created.  When switching files in
+the display, a banner showing the pathname of the file is printed.
+.P
+An interrupt character (usually CTRL/C or DEL) will display a list of the
+most recently modified files being watched.  Send a quit signal
+(usually CTRL/backslash) to stop
+.IR xtail .
+.SH SEE ALSO
+tail(1)
+.SH NOTES
+.I Xtail
+may be easily confused.  For example, if a file is renamed,
+.I xtail
+may or may not continue to monitor it.  If you ask it to monitor a file
+multiple times, it probably will.  If you misspell a filename,
+.I xtail
+will treat it as a nonexistent entry and happily wait for its creation.
+.P
+My favorite use is "xtail /usr/spool/uucp/.Log/*".
+.SH AUTHOR
+Chip Rosenthal <chip@unicom.com>

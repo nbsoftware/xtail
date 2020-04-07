@@ -1,0 +1,55 @@
+=== CHANGES ===
+
+v2.1 - Stamps out a Y2K bug and now uses GNU autoconf.
+
+
+=== SUMMARY ===
+
+"xtail" watches the growth of files.  It's like running a "tail -f"
+on a bunch of files at once.  The syntax is:
+
+	xtail name ...
+
+You can specify both filenames and directories on the command line.
+If you specify a directory, it watches all the files in that
+directory.  It will notice when new files are created (and start
+watching them) or when old files are deleted (and stop watching
+them).
+
+I originally wrote this program so I could run:
+
+	xtail /usr/spool/uucp/.Log/*
+
+Even though I don't use "uucp" any more, I still use this utility
+a lot.  These days, my favorite is:
+
+	xtail /var/log/* /usenet/lib/*log
+
+
+=== INSTRUCTIONS ===
+
+	- xtail version 2 requires an ANSI compiler such as gcc.
+	- Run:  sh configure
+	- If you'd like, review the configuration definitions in xtail.h
+	- Run:  make
+	- If you'd like, as root run:  make install
+
+
+=== HISTORICAL NOTES ===
+
+This program is an oldie but goodie.  It was posted to comp.sources.misc
+in July 1989 (see ftp.uu.net:/usenet/comp.sources.misc/volume7/xtail.Z).
+I remember posting an even earlier version to alt.sources.  It has been
+published in the O'Reilly & Associates "Unix Power Tools" collection
+(book and CD-ROM).
+
+Over the years, some fly-by-night organizations (such as the MIT X
+Consortium and SGI) have tried to steal the "xtail" name.  Don't be
+fooled!  Insist on the original.
+
+The 1989 release credited David Dykstra for his contributions.
+
+Chip Rosenthal
+<chip@unicom.com>
+
+$Id: README,v 2.4 2000/06/04 05:15:35 chip Exp $
