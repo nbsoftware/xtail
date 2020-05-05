@@ -3,7 +3,7 @@ Section: utils
 Priority: optional
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Standards-Version: 4.5.0
-Build-Depends: debhelper-compat (= 12)
+Build-Depends: debhelper-compat (= 13)
 Rules-Requires-Root: no
 Homepage: https://www.unicom.com/sw/xtail
 Vcs-Browser: https://salsa.debian.org/debian/xtail
