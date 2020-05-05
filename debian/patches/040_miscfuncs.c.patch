@@ -1,0 +1,29 @@
+Description: fix compile warning:format ‘%d’ expects argument of type ‘int’
+ but argument 4 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=] 
+ .
+
+---
+
+Origin: xiao sheng wen <atzlinux@sina.com>
+Last-Update: 2020-05-05
+
+--- xtail-2.1.orig/miscfuncs.c
++++ xtail-2.1/miscfuncs.c
+@@ -289,7 +289,7 @@ VOID *safe_malloc(size_t n)
+ {
+ 	VOID *p;
+ 	if ((p = malloc(n)) == NULL) {
+-		fprintf(stderr, "%s: malloc(%d) failed\n", Progname, n);
++		fprintf(stderr, "%s: malloc(%ld) failed\n", Progname, n);
+ 		exit(2);
+ 	}
+ 	return p;
+@@ -299,7 +299,7 @@ VOID *safe_realloc(VOID *p, size_t n)
+ {
+ 	VOID *p1;
+ 	if ((p1 = realloc(p, n)) == NULL) {
+-		fprintf(stderr, "%s: realloc(%d) failed\n", Progname, n);
++		fprintf(stderr, "%s: realloc(%ld) failed\n", Progname, n);
+ 		exit(2);
+ 	}
+ 	return p1;
