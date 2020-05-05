@@ -1,7 +1,7 @@
 Source: xtail
 Section: utils
 Priority: optional
-Maintainer: Debian QA Group <packages@qa.debian.org>
+Maintainer: xiao sheng wen <atzlinux@sina.com>
 Standards-Version: 4.5.0
 Build-Depends: debhelper-compat (= 13)
 Rules-Requires-Root: no
