@@ -1,2 +1,4 @@
 010_previous.patch
 020_iso-dates.patch
+030_xtail.c.patch
+040_miscfuncs.c.patch
