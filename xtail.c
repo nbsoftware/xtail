@@ -1,6 +1,9 @@
 /* $Id: xtail.c,v 2.5 2000/06/04 09:09:03 chip Exp $ */
 
 #include "config.h"
+#ifdef __APPLE__
+#include "string.h"
+#endif
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <stdio.h>

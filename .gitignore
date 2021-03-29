@@ -1,0 +1,7 @@
+*.o
+config.cache
+config.h
+config.status
+config.log
+xtail
+Makefile
