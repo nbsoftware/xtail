@@ -50,6 +50,11 @@ int main(int argc, char *argv[])
 	    continue;
 	}
 
+    if (i == 1 && strcmp(argv[i], "-S") == 0) {
+        Silent = TRUE;
+        continue;
+    }
+
 	/*
 	 * Temporarily throw this entry onto the end of the zapped list.
 	 */

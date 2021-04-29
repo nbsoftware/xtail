@@ -12,7 +12,7 @@
  * be displayed, and a SIGQUIT terminates the program.  If not defined,
  * these signals act normally.
  */
-#define STATUS_ENAB
+//#define STATUS_ENAB
 
 /*
  * SLEEP_TIME - Number of seconds between iterations of the checking loop.
@@ -157,6 +157,7 @@ EXTERN int Reset_status;
 
 
 EXTERN int Debug;
+EXTERN int Silent;
 EXTERN char *Progname;
 
 

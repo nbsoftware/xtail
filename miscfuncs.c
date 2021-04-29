@@ -184,6 +184,9 @@ void fixup_open_files(void)
  */
 void message(int sel, const struct entry_descrip *e)
 {
+    if (Silent)
+        return;
+    
     static char *ofile = NULL;
 
     /*
